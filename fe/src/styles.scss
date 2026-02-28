@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* elimina sublinierile de pe toate linkurile cu directiva mat-button */
+a.mat-button,
+a.mat-raised-button,
+a.mat-stroked-button,
+a.mat-flat-button {
+    text-decoration: none !important;
+}

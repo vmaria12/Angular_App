@@ -1,0 +1,28 @@
+<!-- ══ Header ══ -->
+<mat-toolbar class="app-header">
+
+  <div class="brand">
+    <mat-icon class="brand-icon">school</mat-icon>
+    <span class="brand-name">My Angular App</span>
+  </div>
+
+  <span class="spacer"></span>
+
+  <nav class="nav-links">
+    <a routerLink="/coursants" routerLinkActive="active" class="nav-link">
+      <mat-icon>people</mat-icon>
+      <span>Cursanți</span>
+    </a>
+    <a routerLink="/courses" routerLinkActive="active" class="nav-link">
+      <mat-icon>menu_book</mat-icon>
+      <span>Cursuri</span>
+    </a>
+    <a routerLink="/lessons" routerLinkActive="active" class="nav-link">
+      <mat-icon>play_lesson</mat-icon>
+      <span>Lecții</span>
+    </a>
+  </nav>
+
+</mat-toolbar>
+
+<router-outlet></router-outlet>
