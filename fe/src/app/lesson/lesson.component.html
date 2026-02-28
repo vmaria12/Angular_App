@@ -1,1 +1,27 @@
-<p>lesson works!</p>
+<div class="page-container">
+    <mat-card class="data-card">
+
+        <mat-card-header>
+            <mat-card-title style="color: #fff; ">
+                <mat-icon>play_lesson</mat-icon>
+                Lista tuturor lecțiilor disponibile
+            </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+
+            <p *ngIf="lessons.length === 0" class="empty-msg">
+                <mat-icon>hourglass_empty</mat-icon>
+                Se încarcă lecțiile...
+            </p>
+
+            <div *ngFor="let lesson of lessons; let i = index" class="data-row">
+                <span class="row-index">#{{ i + 1 }}</span>
+                <span class="row-label">Content</span>
+                <span class="row-value">{{ lesson.content }}</span>
+            </div>
+
+        </mat-card-content>
+
+    </mat-card>
+</div>

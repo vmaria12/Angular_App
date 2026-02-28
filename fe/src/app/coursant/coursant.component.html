@@ -1,1 +1,25 @@
-<p>coursant works!</p>
+<div class="page-container">
+    <mat-card class="data-card">
+
+        <mat-card-header>
+            <mat-card-title style="color: #fff;">
+                <mat-icon>people</mat-icon>
+                Lista tuturor cursanților disponibili
+            </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <p *ngIf="coursants.length === 0" class="empty-msg">
+                <mat-icon>hourglass_empty</mat-icon>
+                Nu există cursanți
+            </p>
+            <div *ngFor="let coursant of coursants; let i = index" class="data-row">
+                <span class="row-index">#{{ i + 1 }}</span>
+                <span class="row-label">{{ coursant.firstName }} {{ coursant.lastName }}</span>
+                <span class="row-value">Vârstă: {{ coursant.age }}</span>
+            </div>
+
+        </mat-card-content>
+
+    </mat-card>
+</div>
