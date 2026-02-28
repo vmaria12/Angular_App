@@ -17,3 +17,34 @@ a.mat-stroked-button,
 a.mat-flat-button {
     text-decoration: none !important;
 }
+
+/* Centrare dialog Material in viewport */
+.cdk-global-overlay-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Full-screen dialog — forțăm pe overlay pane și toate containerele */
+.cdk-overlay-pane.fullscreen-dialog {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.fullscreen-dialog .mat-mdc-dialog-container,
+.fullscreen-dialog .mdc-dialog__container,
+.fullscreen-dialog .mat-mdc-dialog-surface,
+.fullscreen-dialog .mdc-dialog__surface,
+.fullscreen-dialog .mat-dialog-container {
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+}

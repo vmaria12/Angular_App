@@ -1,0 +1,35 @@
+<div class="fs-dialog">
+
+    <!-- Header -->
+    <div class="fs-header">
+        <div class="fs-title">
+            <mat-icon>add_circle</mat-icon>
+            Lecție nouă
+        </div>
+        <button mat-icon-button (click)="cancel()" class="fs-close">
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+
+    <!-- Body -->
+    <div class="fs-body">
+        <mat-form-field appearance="outline" class="fs-field">
+            <mat-label>Conținut lecție</mat-label>
+            <textarea matInput [(ngModel)]="content" name="content" rows="8"
+                placeholder="Introdu conținutul lecției..."></textarea>
+        </mat-form-field>
+    </div>
+
+    <!-- Footer -->
+    <div class="fs-footer">
+        <button mat-stroked-button (click)="cancel()">
+            <mat-icon>close</mat-icon>
+            Anulează
+        </button>
+        <button mat-flat-button color="primary" (click)="confirm()" [disabled]="!content.trim()">
+            <mat-icon>save</mat-icon>
+            Creează lecția
+        </button>
+    </div>
+
+</div>
